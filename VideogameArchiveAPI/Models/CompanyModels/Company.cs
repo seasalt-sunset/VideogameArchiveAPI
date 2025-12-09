@@ -1,7 +1,8 @@
-﻿
-namespace VideogameArchiveAPI.Models
+﻿using VideogameArchiveAPI.Models.VideogameModels;
+
+namespace VideogameArchiveAPI.Models.CompanyModels
 {
-    public class Publisher : Company
+    public abstract class Company
     {
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }

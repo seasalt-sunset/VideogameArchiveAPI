@@ -1,6 +1,9 @@
-﻿namespace VideogameArchiveAPI.Models
+﻿using VideogameArchiveAPI.Models.CompanyModels;
+using VideogameArchiveAPI.Models.VideogameModels;
+
+namespace VideogameArchiveAPI.Models
 {
-    public class Console
+    public class GamingConsole
     {
         public int ConsoleId { get; set; }
 		public string ConsoleName { get; set; }

@@ -1,4 +1,4 @@
-﻿namespace VideogameArchiveAPI.Models
+﻿namespace VideogameArchiveAPI.Models.VideogameModels
 {
     public class Genre
     {

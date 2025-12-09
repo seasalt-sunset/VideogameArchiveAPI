@@ -1,5 +1,6 @@
-﻿
-namespace VideogameArchiveAPI.Models
+﻿using VideogameArchiveAPI.Models.VideogameModels;
+
+namespace VideogameArchiveAPI.Models.CompanyModels
 {
     public class Developer : Company
     {

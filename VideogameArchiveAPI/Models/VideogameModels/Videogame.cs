@@ -1,6 +1,7 @@
 ﻿using VideogameArchiveAPI.Enums;
+using VideogameArchiveAPI.Models.CompanyModels;
 
-namespace VideogameArchiveAPI.Models
+namespace VideogameArchiveAPI.Models.VideogameModels
 {
     public class Videogame
     {
@@ -11,7 +12,7 @@ namespace VideogameArchiveAPI.Models
         public int MaxPlayers { get; set; }
         public bool EarlyAccess { get; set; }
 
-        public ICollection<Console> Consoles { get; set; }
+        public ICollection<GamingConsole> GamingConsoles { get; set; }
         public ICollection<Developer> Developers { get; set; }
         public ICollection<Publisher> Publishers { get; set; }
         public ICollection<Genre> Genres { get; set; }
