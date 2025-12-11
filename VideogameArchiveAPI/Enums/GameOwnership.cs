@@ -1,7 +1,8 @@
 ﻿namespace VideogameArchiveAPI.Enums
 {
-    public enum Ownership
+    public enum GameOwnership
     {
+        Unspecified,
         Wishlist,
         Owned,
         Household,

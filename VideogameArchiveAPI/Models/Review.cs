@@ -9,7 +9,7 @@ namespace VideogameArchiveAPI.Models
         public string ReviewTitle { get; set; }
         public string ReviewContent { get; set; }
 
-        public string VideogameUserId { get; set; }
+        public int VideogameUserId { get; set; }
         public VideogameUser VideogameUser { get; set; }
 
     }

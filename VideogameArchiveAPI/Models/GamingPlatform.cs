@@ -3,7 +3,7 @@ using VideogameArchiveAPI.Models.VideogameModels;
 
 namespace VideogameArchiveAPI.Models
 {
-    public class GamingConsole
+    public class GamingPlatform
     {
         public int ConsoleId { get; set; }
 		public string ConsoleName { get; set; }

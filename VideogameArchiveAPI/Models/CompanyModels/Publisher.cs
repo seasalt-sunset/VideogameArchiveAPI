@@ -7,7 +7,7 @@ namespace VideogameArchiveAPI.Models.CompanyModels
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
         public List<Videogame> GameList { get; set; }
-        public List<GamingConsole> GamingConsolesList { get; set; }
+        public List<GamingPlatform> GamingConsolesList { get; set; }
 
     }
 }

@@ -2,6 +2,7 @@
 {
     public enum GameStatus
     {
+        Unspecified,
         Mastered,
         Completed,
         Ongoing,
