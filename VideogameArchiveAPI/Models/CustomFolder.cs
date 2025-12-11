@@ -6,9 +6,8 @@ namespace VideogameArchiveAPI.Models
     {
         public int FolderId { get; set; }
         public string FolderName { get; set; }
-        public ICollection<Videogame> Videogames { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
         public ICollection<VideogameUser> VideogamesUser { get; set; }
 
 

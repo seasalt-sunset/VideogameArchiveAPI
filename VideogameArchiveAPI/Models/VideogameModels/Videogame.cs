@@ -16,6 +16,10 @@ namespace VideogameArchiveAPI.Models.VideogameModels
         public ICollection<Developer> Developers { get; set; }
         public ICollection<Publisher> Publishers { get; set; }
         public ICollection<Genre> Genres { get; set; }
+        public ICollection<Tag> Tags { get; set; }
         public ICollection<GameMode> GameModes { get; set; }
+        public ICollection<User> Users { get; set; }
+        public ICollection<VideogameUser> VideogameUsers { get; set; }
+
     }
 }
