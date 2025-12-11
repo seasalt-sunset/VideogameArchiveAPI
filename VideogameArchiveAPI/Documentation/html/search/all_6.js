@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['gameid_0',['GameId',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_videogame.html#a7f2ea8dd183e835254ef871f366565dc',1,'VideogameArchiveAPI::Models::VideogameModels::Videogame']]],
+  ['gamelist_1',['GameList',['../class_videogame_archive_a_p_i_1_1_models_1_1_company_models_1_1_company.html#af57feb7f15e346c72dc44b4916b0ec79',1,'VideogameArchiveAPI.Models.CompanyModels.Company.GameList'],['../class_videogame_archive_a_p_i_1_1_models_1_1_company_models_1_1_developer.html#ad596b043e85220225fcf88d30d7f1e8c',1,'VideogameArchiveAPI.Models.CompanyModels.Developer.GameList'],['../class_videogame_archive_a_p_i_1_1_models_1_1_company_models_1_1_publisher.html#a8f11c9c40870920400f61db6bd565d42',1,'VideogameArchiveAPI.Models.CompanyModels.Publisher.GameList']]],
+  ['gamemode_2',['GameMode',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_game_mode.html',1,'VideogameArchiveAPI::Models::VideogameModels']]],
+  ['gamemode_2ecs_3',['GameMode.cs',['../_game_mode_8cs.html',1,'']]],
+  ['gamemodename_4',['GameModeName',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_game_mode.html#a95a1069ff572591e3ca7c858ba043fc9',1,'VideogameArchiveAPI::Models::VideogameModels::GameMode']]],
+  ['gamemodes_5',['GameModes',['../class_videogame_archive_a_p_i_1_1_data_1_1_videogame_archive_a_p_i_db_context.html#a3ab18abb002f55572053901e6cf6fdbf',1,'VideogameArchiveAPI.Data.VideogameArchiveAPIDbContext.GameModes'],['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_videogame.html#acd58597f58c227187bb321c813d5dd08',1,'VideogameArchiveAPI.Models.VideogameModels.Videogame.GameModes']]],
+  ['gamename_6',['GameName',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_videogame.html#af5dadc40716339626112dd4cb67f063a',1,'VideogameArchiveAPI::Models::VideogameModels::Videogame']]],
+  ['gamestatus_7',['GameStatus',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_videogame_user.html#a69629211f24fb718b625f4b1e8cb36f4',1,'VideogameArchiveAPI.Models.VideogameModels.VideogameUser.GameStatus'],['../namespace_videogame_archive_a_p_i_1_1_enums.html#a148566399b322a90bb4946202f46b9e0',1,'VideogameArchiveAPI.Enums.GameStatus']]],
+  ['gamestatus_2ecs_8',['GameStatus.cs',['../_game_status_8cs.html',1,'']]],
+  ['gamingconsole_9',['GamingConsole',['../class_videogame_archive_a_p_i_1_1_models_1_1_gaming_console.html',1,'VideogameArchiveAPI::Models']]],
+  ['gamingconsole_2ecs_10',['GamingConsole.cs',['../_gaming_console_8cs.html',1,'']]],
+  ['gamingconsoles_11',['GamingConsoles',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_videogame.html#a7b8c44b014cb800034a0f6bd0dc4ca1b',1,'VideogameArchiveAPI::Models::VideogameModels::Videogame']]],
+  ['gamingconsoleslist_12',['GamingConsolesList',['../class_videogame_archive_a_p_i_1_1_models_1_1_company_models_1_1_publisher.html#acd722016a8183abb944220c7950738fe',1,'VideogameArchiveAPI::Models::CompanyModels::Publisher']]],
+  ['genre_13',['Genre',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_genre.html',1,'VideogameArchiveAPI::Models::VideogameModels']]],
+  ['genre_2ecs_14',['Genre.cs',['../_genre_8cs.html',1,'']]],
+  ['genreid_15',['GenreId',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_genre.html#a90b5ece152852b59322a59b94100f95a',1,'VideogameArchiveAPI::Models::VideogameModels::Genre']]],
+  ['genrename_16',['GenreName',['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_genre.html#afed503c4c49983b18b9dcc39373aa44f',1,'VideogameArchiveAPI::Models::VideogameModels::Genre']]],
+  ['genres_17',['Genres',['../class_videogame_archive_a_p_i_1_1_data_1_1_videogame_archive_a_p_i_db_context.html#abe255289ffe5175369ad70606de5835c',1,'VideogameArchiveAPI.Data.VideogameArchiveAPIDbContext.Genres'],['../class_videogame_archive_a_p_i_1_1_models_1_1_videogame_models_1_1_videogame.html#a40e83a54017d84aeeb2cecca4ab3680a',1,'VideogameArchiveAPI.Models.VideogameModels.Videogame.Genres']]]
+];
