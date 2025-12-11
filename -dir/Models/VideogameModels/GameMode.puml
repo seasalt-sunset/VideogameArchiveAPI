@@ -1,0 +1,9 @@
+@startuml
+class GameMode {
+    + Id : int <<get>> <<set>>
+    + GameModeName : string <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+GameMode --> "VideogameList<Videogame>" "ICollection`1"
+@enduml

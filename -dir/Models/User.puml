@@ -1,0 +1,11 @@
+@startuml
+class User {
+    + UserId : string <<get>> <<init>>
+    + UserName : string <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+User --> "CreatedAt" DateTime
+User --> "UpdatedAt" DateTime
+User --> "Videogames<Videogame>" "ICollection`1"
+@enduml

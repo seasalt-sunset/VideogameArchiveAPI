@@ -1,0 +1,117 @@
+@startuml
+/'
+class MapperConfig {
+}
+class Program {
+    + {static} Main(args:string[]) : void
+}
+class VideogameArchiveAPIDbContext {
+    + VideogameArchiveAPIDbContext(options:DbContextOptions<VideogameArchiveAPIDbContext>)
+}
+'/
+enum GameStatus {
+    Mastered,
+    Completed,
+    Ongoing,
+    Paused,
+    Played,
+    Replay,
+    Unfinished,
+    Retired,
+    Tried,
+    Dropped,
+    Ragequitted,
+    Unplayed,
+    None,
+}
+enum Ownership {
+    Wishlist,
+    Owned,
+    Household,
+    Shared,
+    Subscription,
+    Borrowed,
+    TriedIt,
+    FormerlyOwned,
+}
+class CustomFolder {
+    + FolderId : int <<get>> <<set>>
+    + FolderName : string <<get>> <<set>>
+    + CreatedAt : DateTimeOffset <<get>> <<set>>
+    + UpdatedAt : DateTimeOffset <<get>> <<set>>
+}
+CustomFolder "0..*" <--> "0..*" VideogameUser
+class GamingConsole {
+    + ConsoleId : int <<get>> <<set>>
+    + ConsoleName : string <<get>> <<set>>
+    + ReleaseDate : DateOnly <<get>> <<set>>
+}
+GamingConsole "1..*" <--> "0..*" Videogame
+class Review {
+    + ReviewId : int <<get>> <<set>>
+    + Vote : double <<get>> <<set>>
+    + ReviewTitle : string <<get>> <<set>>
+    + ReviewContent : string <<get>> <<set>>
+    + VideogameUserId : string <<get>> <<set>>
+}
+Review "0..1" --> "1" VideogameUser : "VideogameUser"
+class User {
+    + UserId : string <<get>> <<init>>
+    + UserName : string <<get>> <<set>>
+    + CreatedAt : DateTimeOffset <<get>> <<set>>
+    + UpdatedAt : DateTimeOffset <<get>> <<set>>
+}
+User "0..*" --> "0..*" Videogame : "VideogameUser"
+abstract class Company {
+    + CompanyId : int <<get>> <<set>>
+    + CompanyName : string <<get>> <<set>>
+}
+class Developer {
+    + CompanyId : int <<get>> <<set>>
+    + CompanyName : string <<get>> <<set>>
+}
+Company <|-- Developer
+Developer "1..*" <--> "0..*" Videogame
+class Publisher {
+    + CompanyId : int <<get>> <<set>>
+    + CompanyName : string <<get>> <<set>>
+}
+Company <|-- Publisher
+Publisher "1..*" <--> "0..*" Videogame
+Publisher "1" <--> "0..*" GamingConsole
+class GameMode {
+    + Id : int <<get>> <<set>>
+    + GameModeName : string <<get>> <<set>>
+}
+GameMode "1..*" <--> "0..*" Videogame
+class Genre {
+    + GenreId : int <<get>> <<set>>
+    + GenreName : string <<get>> <<set>>
+}
+Genre "1..*" <--> "0..*" Videogame
+class Tag {
+    + TagId : int <<get>> <<set>>
+    + TagName : string <<get>> <<set>>
+}
+Tag "0..*" <--> "0..*" Videogame
+class Videogame {
+    + GameId : int <<get>> <<set>>
+    + GameName : string <<get>> <<set>>
+    + MinPlayers : int <<get>> <<set>>
+    + MaxPlayers : int <<get>> <<set>>
+    + EarlyAccess : bool <<get>> <<set>>
+    + ReleaseDate : DateOnly <<get>> <<set>>
+}
+class VideogameUser {
+    + VideogameUserId : int <<get>> <<set>>
+    + VideogameId : int <<get>> <<set>>
+    + UserId : string <<get>> <<set>>
+    + HoursPlayed : TimeSpan <<get>> <<set>>
+    + BetaTested : bool <<get>> <<set>> = false
+    + TimesCompleted : int <<get>> <<set>>
+}
+User "1" <--> "0..*" VideogameUser : "VideogameUser"
+Videogame "1" <--> "0..*" VideogameUser : "VideogameUser"
+VideogameUser --> "GameStatus" GameStatus
+VideogameUser --> "Ownership" Ownership
+@enduml

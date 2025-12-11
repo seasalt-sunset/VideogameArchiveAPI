@@ -1,0 +1,11 @@
+@startuml
+class Publisher {
+    + CompanyId : int <<get>> <<set>>
+    + CompanyName : string <<get>> <<set>>
+}
+class "List`1"<T> {
+}
+Company <|-- Publisher
+Publisher --> "GameList<Videogame>" "List`1"
+Publisher --> "GamingConsolesList<GamingConsole>" "List`1"
+@enduml

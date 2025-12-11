@@ -1,0 +1,11 @@
+@startuml
+class GamingConsole {
+    + ConsoleId : int <<get>> <<set>>
+    + ConsoleName : string <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+GamingConsole --> "ReleaseDate" DateOnly
+GamingConsole --> "Publisher" Publisher
+GamingConsole --> "VideogameList<Videogame>" "ICollection`1"
+@enduml

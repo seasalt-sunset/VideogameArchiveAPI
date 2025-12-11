@@ -1,0 +1,12 @@
+@startuml
+class CustomFolder {
+    + FolderId : int <<get>> <<set>>
+    + FolderName : string <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+CustomFolder --> "Videogames<Videogame>" "ICollection`1"
+CustomFolder --> "CreatedAt" DateTimeOffset
+CustomFolder --> "UpdatedAt" DateTimeOffset
+CustomFolder --> "VideogamesUser<VideogameUser>" "ICollection`1"
+@enduml

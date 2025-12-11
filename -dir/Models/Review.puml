@@ -1,0 +1,10 @@
+@startuml
+class Review {
+    + ReviewId : int <<get>> <<set>>
+    + Vote : double <<get>> <<set>>
+    + ReviewTitle : string <<get>> <<set>>
+    + ReviewContent : string <<get>> <<set>>
+    + VideogameUserId : string <<get>> <<set>>
+}
+Review --> "VideogameUser" VideogameUser
+@enduml

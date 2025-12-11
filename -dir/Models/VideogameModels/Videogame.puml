@@ -1,0 +1,17 @@
+@startuml
+class Videogame {
+    + GameId : int <<get>> <<set>>
+    + GameName : string <<get>> <<set>>
+    + MinPlayers : int <<get>> <<set>>
+    + MaxPlayers : int <<get>> <<set>>
+    + EarlyAccess : bool <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+Videogame --> "ReleaseDate" DateOnly
+Videogame --> "GamingConsoles<GamingConsole>" "ICollection`1"
+Videogame --> "Developers<Developer>" "ICollection`1"
+Videogame --> "Publishers<Publisher>" "ICollection`1"
+Videogame --> "Genres<Genre>" "ICollection`1"
+Videogame --> "GameModes<GameMode>" "ICollection`1"
+@enduml

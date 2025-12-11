@@ -1,0 +1,16 @@
+@startuml
+class VideogameUser {
+    + VideogameUserId : int <<get>> <<set>>
+    + VideogameId : int <<get>> <<set>>
+    + UserId : string <<get>> <<set>>
+    + BetaTested : bool <<get>> <<set>> = false
+    + TimesCompleted : int <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+VideogameUser --> "Videogame" Videogame
+VideogameUser --> "User" User
+VideogameUser --> "GameStatus" GameStatus
+VideogameUser --> "HoursPlayed" TimeSpan
+VideogameUser --> "CustomFolders<CustomFolder>" "ICollection`1"
+@enduml

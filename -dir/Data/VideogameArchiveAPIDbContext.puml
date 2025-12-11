@@ -1,0 +1,18 @@
+@startuml
+class VideogameArchiveAPIDbContext {
+    + VideogameArchiveAPIDbContext(options:DbContextOptions<VideogameArchiveAPIDbContext>)
+}
+class "DbSet`1"<T> {
+}
+DbContext <|-- VideogameArchiveAPIDbContext
+VideogameArchiveAPIDbContext --> "Videogames<Videogame>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "Companies<Company>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "Developers<Developer>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "Publishers<Publisher>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "GameModes<GameMode>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "Genres<Genre>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "VideogameUsers<VideogameUser>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "Consoles<GamingConsole>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "CustomFolders<CustomFolder>" "DbSet`1"
+VideogameArchiveAPIDbContext --> "Users<User>" "DbSet`1"
+@enduml

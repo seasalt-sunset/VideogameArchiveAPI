@@ -1,0 +1,9 @@
+@startuml
+class Genre {
+    + GenreId : int <<get>> <<set>>
+    + GenreName : string <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+Genre --> "VideogameList<Videogame>" "ICollection`1"
+@enduml

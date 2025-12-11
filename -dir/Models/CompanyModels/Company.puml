@@ -1,0 +1,9 @@
+@startuml
+abstract class Company {
+    + CompanyId : int <<get>> <<set>>
+    + CompanyName : string <<get>> <<set>>
+}
+class "List`1"<T> {
+}
+Company --> "GameList<Videogame>" "List`1"
+@enduml
