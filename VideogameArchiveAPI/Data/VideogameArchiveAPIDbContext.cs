@@ -2,6 +2,7 @@
 using VideogameArchiveAPI.Models;
 using VideogameArchiveAPI.Models.CompanyModels;
 using VideogameArchiveAPI.Models.VideogameModels;
+using Microsoft.Extensions.Configuration;
 namespace VideogameArchiveAPI.Data
 {
     public class VideogameArchiveAPIDbContext : DbContext
@@ -26,14 +27,18 @@ namespace VideogameArchiveAPI.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Company>().UseTpcMappingStrategy();
+            modelBuilder.Entity<Company>(entity =>
+            {
+                entity.HasKey(e => e.CompanyId);
 
-            //correggi tutto qui sotto
+                entity.UseTpcMappingStrategy();
+
+                entity.Ignore(e => e.GameList);
+            });
 
             modelBuilder.Entity<Videogame>(entity =>
             {
                 entity.HasKey(e => e.GameId);
-
                 entity.HasMany(e => e.GamingPlatforms)
                 .WithMany(e => e.VideogameList)
                 .UsingEntity(j => j.ToTable("VideogamesConsoles"));
@@ -56,11 +61,18 @@ namespace VideogameArchiveAPI.Data
                 entity.HasMany(e => e.GameModes)
                 .WithMany(m => m.VideogameList)
                 .UsingEntity(j => j.ToTable("VideogamesGameModes"));
+
+                entity.HasOne(e => e.DLCOfWhatGame)
+                .WithMany(g => g.DLCs)
+                .HasForeignKey(e => e.DLCOfWhatGameId)
+                .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<VideogameUser>(entity =>
             {
                 entity.HasKey(e => e.VideogameUserId);
+
+                entity.HasIndex(e => new { e.UserId, e.VideogameId });
 
                 entity.HasOne(e => e.Videogame)
                 .WithMany(v => v.VideogameUsers)
@@ -80,6 +92,13 @@ namespace VideogameArchiveAPI.Data
                 .UsingEntity(j => j.ToTable("CustomFolderVideogameUser"));
             });
 
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasKey(e => e.UserId);
+                entity.Property(e => e.UserId).ValueGeneratedNever().IsRequired();
+                entity.Property(e => e.UserName).IsRequired();
+            });
+            
             modelBuilder.Entity<Review>(entity =>
             {
                 entity.HasKey(e => e.ReviewId);
@@ -95,6 +114,26 @@ namespace VideogameArchiveAPI.Data
                 entity.HasKey(e => e.ConsoleId);
                 entity.HasOne(e => e.Publisher)
                 .WithMany(p => p.GamingConsolesList);
+            });
+
+            modelBuilder.Entity<CustomFolder>(entity =>
+            {
+                entity.HasKey(e => e.FolderId);
+            });
+
+            modelBuilder.Entity<GameMode>(entity =>
+            {
+                entity.HasKey(e => e.GameModeId);
+            });
+
+            modelBuilder.Entity<Genre>(entity =>
+            {
+                entity.HasKey(e => e.GenreId);
+            });
+
+            modelBuilder.Entity<Tag>(entity =>
+            {
+                entity.HasKey(e => e.TagId);
             });
         }
     }

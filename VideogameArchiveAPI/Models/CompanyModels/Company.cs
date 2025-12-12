@@ -1,4 +1,5 @@
-﻿using VideogameArchiveAPI.Models.VideogameModels;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using VideogameArchiveAPI.Models.VideogameModels;
 
 namespace VideogameArchiveAPI.Models.CompanyModels
 {
