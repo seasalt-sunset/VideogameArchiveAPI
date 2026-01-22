@@ -26,6 +26,7 @@ namespace VideogameArchiveAPI.Models.VideogameModels
 
 
         public ICollection<GamingPlatform> GamingPlatforms { get; set; }
+        public ICollection<SubscriptionService> SubscriptionServices { get; set; }
         public ICollection<Developer> Developers { get; set; }
         public ICollection<Publisher> Publishers { get; set; }
         public ICollection<Genre> Genres { get; set; }

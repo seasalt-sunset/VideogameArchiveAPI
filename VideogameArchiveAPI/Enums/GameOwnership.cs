@@ -11,6 +11,7 @@
         Borrowed,
         TriedIt,
         FormerlyOwned,
+        ClosedServer
 
     }
 }

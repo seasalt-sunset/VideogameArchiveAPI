@@ -11,6 +11,7 @@ namespace VideogameArchiveAPI.Models
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
         public ICollection<VideogameUser> VideogamesUser { get; set; }
+        public ICollection<VideogameCopy> VideogameCopies { get; set; }
 
 
     }
