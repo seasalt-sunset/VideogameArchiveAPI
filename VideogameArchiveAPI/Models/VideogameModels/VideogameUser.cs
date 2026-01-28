@@ -15,5 +15,6 @@ namespace VideogameArchiveAPI.Models.VideogameModels
         public string? Notes { get; set; }
         public ICollection<CustomFolder>? CustomFolders { get; set; }
         public Review? Review { get; set; }
+        public ICollection<VideogameCopy> VideogameCopies { get; set; }
     }
 }

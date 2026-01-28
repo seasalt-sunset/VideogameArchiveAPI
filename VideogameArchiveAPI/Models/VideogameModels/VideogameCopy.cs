@@ -14,9 +14,11 @@ namespace VideogameArchiveAPI.Models.VideogameModels
         public GamePriority GamePriority { get; set; } = GamePriority.Unspecified;
         public GameFormat GameFormat { get; set; } = GameFormat.Unspecified;
         public GameRegion GameRegion { get; set; } = GameRegion.Unspecified;
-        public SubscriptionService SubscriptionService { get; set; } = SubscriptionService.None;
+        public SubscriptionService SubscriptionService { get; set; }
         public int AchievementsObtained { get; set; } = 0;
         public int AchievementsTotal { get; set; } = 0;
+        public DateOnly? PlayedFrom { get; set; }
+        public DateOnly? PlayedTo { get; set; }
         public ICollection<CustomFolder>? CustomFolders { get; set; }
         public ICollection<RealOwner>? RealOwners { get; set; }
 

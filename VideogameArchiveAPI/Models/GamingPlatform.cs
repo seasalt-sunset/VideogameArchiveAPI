@@ -11,6 +11,7 @@ namespace VideogameArchiveAPI.Models
 		public string ConsoleName { get; set; }
         [Required]
         public DateOnly ReleaseDate { get; set; }
+        public int PublisherId { get; set; }
         public Publisher Publisher { get; set; }
         public ICollection<Videogame> VideogameList { get; set; }
 
