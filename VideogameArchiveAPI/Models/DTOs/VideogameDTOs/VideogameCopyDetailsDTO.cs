@@ -1,23 +1,25 @@
 ﻿using VideogameArchiveAPI.Enums;
+using VideogameArchiveAPI.Models.DTOs;
 
-namespace VideogameArchiveAPI.Models.VideogameEntities
+namespace VideogameArchiveAPI.Models.DTOs.VideogameDTOs
 {
-    public class VideogameCopyDTO
+    public class VideogameCopyDetailsDTO
     {
-        public VideogameDTO? FromVideogameCollection { get; set; }
+        public int VideogameCopyId { get; set; }
+        public VideogameSlimDTO? FromVideogameCollection { get; set; }
         public TimeSpan? HoursPlayed { get; set; }
         public GameStatus GameStatus { get; set; } = GameStatus.Unspecified;
         public GameOwnership GameOwnership { get; set; } = GameOwnership.Unspecified;
         public GamePriority GamePriority { get; set; } = GamePriority.Unspecified;
         public GameFormat GameFormat { get; set; } = GameFormat.Unspecified;
         public GameRegion GameRegion { get; set; } = GameRegion.Unspecified;
-        public SubscriptionServiceDTO SubscriptionService { get; set; }
+        public SubscriptionServiceSlimDTO SubscriptionService { get; set; }
         public int AchievementsObtained { get; set; } = 0;
         public int AchievementsTotal { get; set; } = 0;
         public DateOnly? PlayedFrom { get; set; }
         public DateOnly? PlayedTo { get; set; }
-        public ICollection<CustomFolderDTO>? CustomFolders { get; set; }
-        public ICollection<RealOwnerDTO>? RealOwners { get; set; }
+        public List<CustomFolderSlimDTO>? CustomFolders { get; set; }
+        public List<RealOwnerSlimDTO>? RealOwners { get; set; }
 
     }
 }

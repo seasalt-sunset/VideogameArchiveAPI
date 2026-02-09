@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using VideogameArchiveAPI.Models.VideogameEntities;
-
-namespace VideogameArchiveAPI.Models
+namespace VideogameArchiveAPI.Models.DTOs
 {
     public class ReviewDTO
     {
+        public int ReviewId { get; set; }
         public double? Vote { get; set; } = null;
         [Required]
         public string ReviewTitle { get; set; }
