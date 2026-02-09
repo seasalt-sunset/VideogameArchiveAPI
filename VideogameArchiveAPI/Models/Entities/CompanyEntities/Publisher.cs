@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using VideogameArchiveAPI.Models.VideogameModels;
+using VideogameArchiveAPI.Models.Entities;
+using VideogameArchiveAPI.Models.Entities.VideogameEntities;
 
-namespace VideogameArchiveAPI.Models.CompanyModels
+namespace VideogameArchiveAPI.Models.Entities.CompanyEntities
 {
     public class Publisher : Company
     {

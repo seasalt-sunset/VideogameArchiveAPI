@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VideogameArchiveAPI.Models;
-using VideogameArchiveAPI.Models.CompanyModels;
-using VideogameArchiveAPI.Models.VideogameModels;
 using Microsoft.Extensions.Configuration;
+using VideogameArchiveAPI.Models.Entities;
+using VideogameArchiveAPI.Models.Entities.CompanyEntities;
+using VideogameArchiveAPI.Models.Entities.VideogameEntities;
 namespace VideogameArchiveAPI.Data
 {
     public class VideogameArchiveAPIDbContext : DbContext
@@ -176,22 +176,18 @@ namespace VideogameArchiveAPI.Data
             modelBuilder.Entity<Review>(entity =>
             {
                 entity.HasKey(e => e.ReviewId);
+                entity.Property(e => e.ReviewTitle).IsRequired();
+                entity.Property(e => e.ReviewContent).IsRequired();
             });
 
             //AGGIUNGERE TUTTE LE CLASSI CON HASKEY E ISREQUIRED
             modelBuilder.Entity<GamingPlatform>(entity =>
             {
-                entity.HasKey(e => e.ConsoleId);
-
+                entity.HasKey(e => e.PlatformId);
+                entity.Property(e => e.PlatformName).IsRequired();
                 entity.HasOne(e => e.Publisher)
                 .WithMany(p => p.GamingConsolesList)
                 .HasForeignKey(e => e.PublisherId);
-            });
-
-            modelBuilder.Entity<CustomFolder>(entity =>
-            {
-                entity.HasKey(e => e.FolderId);
-                entity.Property(e => e.FolderName).IsRequired();
             });
 
             modelBuilder.Entity<GameMode>(entity =>

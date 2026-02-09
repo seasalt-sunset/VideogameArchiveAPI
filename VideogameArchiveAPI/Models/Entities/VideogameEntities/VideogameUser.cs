@@ -1,6 +1,7 @@
 ﻿using VideogameArchiveAPI.Enums;
+using VideogameArchiveAPI.Models.Entities;
 
-namespace VideogameArchiveAPI.Models.VideogameModels
+namespace VideogameArchiveAPI.Models.Entities.VideogameEntities
 {
     public class VideogameUser
     {

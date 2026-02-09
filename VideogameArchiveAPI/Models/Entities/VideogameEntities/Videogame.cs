@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using VideogameArchiveAPI.Enums;
-using VideogameArchiveAPI.Models.CompanyModels;
+using VideogameArchiveAPI.Models.Entities;
+using VideogameArchiveAPI.Models.Entities.CompanyEntities;
 
-namespace VideogameArchiveAPI.Models.VideogameModels
+namespace VideogameArchiveAPI.Models.Entities.VideogameEntities
 {
     public class Videogame
     {

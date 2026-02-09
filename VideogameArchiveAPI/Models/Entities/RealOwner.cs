@@ -1,6 +1,6 @@
-﻿using VideogameArchiveAPI.Models.VideogameModels;
+﻿using VideogameArchiveAPI.Models.Entities.VideogameEntities;
 
-namespace VideogameArchiveAPI.Models
+namespace VideogameArchiveAPI.Models.Entities
 {
     public class RealOwner
     {

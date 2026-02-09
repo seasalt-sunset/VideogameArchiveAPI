@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace VideogameArchiveAPI.Models.VideogameModels
+namespace VideogameArchiveAPI.Models.Entities.VideogameEntities
 {
     public class Genre
     {

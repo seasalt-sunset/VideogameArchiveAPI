@@ -1,13 +1,12 @@
-﻿using VideogameArchiveAPI.Models.VideogameModels;
+﻿using VideogameArchiveAPI.Models.VideogameEntities;
 
 namespace VideogameArchiveAPI.Models
 {
-    public class SubscriptionService
+    public class SubscriptionServiceDTO
     {
-        public int SubscriptionServiceId { get; set; }
         public string SubscriptionServiceName { get; set; }
         public double? Price { get; set; }
-        public ICollection<Videogame> Videogames { get; set; }
+        public ICollection<VideogameDTO> Videogames { get; set; }
 
 
 
