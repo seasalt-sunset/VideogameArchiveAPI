@@ -7,7 +7,7 @@ namespace VideogameArchiveAPI.Models.Entities.VideogameEntities
         public int GenreId { get; set; }
         [Required]
         public string GenreName { get; set; }
-        public ICollection<Videogame> VideogameList { get; set; }
+        public ICollection<Videogame> VideogameList { get; set; } = new List<Videogame>();
 
     }
 }

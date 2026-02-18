@@ -13,7 +13,7 @@ namespace VideogameArchiveAPI.Models.Entities
         public DateOnly? ReleaseDate { get; set; }
         public int? PublisherId { get; set; }
         public Publisher? Publisher { get; set; }
-        public ICollection<Videogame> VideogameList { get; set; }
+        public ICollection<Videogame> VideogameList { get; set; } = new List<Videogame>();
 
 
 

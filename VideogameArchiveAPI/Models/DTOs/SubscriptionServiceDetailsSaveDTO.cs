@@ -1,13 +1,13 @@
-﻿using VideogameArchiveAPI.Models.Entities.VideogameEntities;
+﻿using VideogameArchiveAPI.Models.DTOs.VideogameDTOs;
 
-namespace VideogameArchiveAPI.Models.Entities
+namespace VideogameArchiveAPI.Models.DTOs
 {
-    public class SubscriptionService
+    public class SubscriptionServiceDetailsSaveDTO
     {
         public int SubscriptionServiceId { get; set; }
         public string SubscriptionServiceName { get; set; }
         public double? Price { get; set; }
-        public ICollection<Videogame> Videogames { get; set; } = new List<Videogame>();
+        public List<int>? VideogamesIds { get; set; }
 
 
 

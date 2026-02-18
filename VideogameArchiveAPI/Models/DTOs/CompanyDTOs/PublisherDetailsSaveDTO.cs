@@ -3,13 +3,12 @@ using VideogameArchiveAPI.Models.DTOs.VideogameDTOs;
 
 namespace VideogameArchiveAPI.Models.DTOs.CompanyDTOs
 {
-    public class PublisherDetailsDTO
+    public class PublisherDetailsSaveDTO
     {
-        public int PublisherId { get; set; }
         [Required]
         public string PublisherName { get; set; }
-        public List<VideogameSlimDTO> GameList { get; set; }
-        public List<GamingPlatformSlimDTO> GamingConsolesList { get; set; }
+        public List<int>? GameIdsList { get; set; } = null;
+        public List<int>? GamingConsolesIdsList { get; set; } = null;
 
     }
 }

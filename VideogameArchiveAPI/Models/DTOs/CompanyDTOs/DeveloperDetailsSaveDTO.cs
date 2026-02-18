@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using VideogameArchiveAPI.Models.DTOs.VideogameDTOs;
 
 namespace VideogameArchiveAPI.Models.DTOs.CompanyDTOs
 {
-    public class DeveloperSlimDTO
+    public class DeveloperDetailsSaveDTO
     {
-        public int DeveloperId { get; set; }
         [Required]
         public string DeveloperName { get; set; }
+        public List<int>? GameIdsList { get; set; } = null;
     }
 }

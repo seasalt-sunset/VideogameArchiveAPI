@@ -12,7 +12,6 @@ namespace VideogameArchiveAPI.Data
 
         }
 
-        public DbSet<Company> Companies { get; set; }
         public DbSet<Developer> Developers { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<GameMode> GameModes { get; set; }
@@ -31,15 +30,6 @@ namespace VideogameArchiveAPI.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Company>(entity =>
-            {
-                entity.HasKey(e => e.CompanyId);
-
-                entity.UseTpcMappingStrategy();
-
-                entity.Ignore(e => e.GameList);
-            });
 
             modelBuilder.Entity<Videogame>(entity =>
             {
@@ -210,14 +200,14 @@ namespace VideogameArchiveAPI.Data
 
             modelBuilder.Entity<Publisher>(entity =>
             {
-                entity.HasKey(e => e.CompanyId);
-                entity.Property(e => e.CompanyName).IsRequired();
+                entity.HasKey(e => e.PublisherId);
+                entity.Property(e => e.PublisherName).IsRequired();
             });
 
             modelBuilder.Entity<Developer>(entity =>
             {
-                entity.HasKey(e => e.CompanyId);
-                entity.Property(e => e.CompanyName).IsRequired();
+                entity.HasKey(e => e.DeveloperId);
+                entity.Property(e => e.DeveloperName).IsRequired();
             });
 
             modelBuilder.Entity<SubscriptionService>(entity =>

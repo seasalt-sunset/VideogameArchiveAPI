@@ -1,13 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using VideogameArchiveAPI.Models.Entities.VideogameEntities;
 
 namespace VideogameArchiveAPI.Models.Entities.CompanyEntities
 {
-    public class Developer : Company
+    public class Developer
     {
-        public int CompanyId { get; set; }
+        public int DeveloperId { get; set; }
         [Required]
-        public string CompanyName { get; set; }
-        public List<Videogame> GameList { get; set; }
+        public string DeveloperName { get; set; }
+        public ICollection<Videogame> GameList { get; set; } = new List<Videogame>();
     }
 }

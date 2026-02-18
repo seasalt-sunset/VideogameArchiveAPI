@@ -1,27 +1,25 @@
 ﻿using VideogameArchiveAPI.Enums;
-using VideogameArchiveAPI.Models.Entities;
+using VideogameArchiveAPI.Models.DTOs;
 
-namespace VideogameArchiveAPI.Models.Entities.VideogameEntities
+namespace VideogameArchiveAPI.Models.DTOs.VideogameDTOs
 {
-    public class VideogameCopy
+    public class VideogameCopyDetailsSaveDTO
     {
-        public int VideogameCopyId { get; set; }
-        public int VideogameUserId { get; set; }
-        public int FromVideogameCollectionId { get; set; }
-        public Videogame? FromVideogameCollection { get; set; }
-        public TimeSpan? HoursPlayed { get; set; }
+        public VideogameSlimDTO? FromVideogameCollection { get; set; }
+        public int HoursPlayed { get; set; }
+        public int MinutesPlayed { get; set; }
         public GameStatus GameStatus { get; set; } = GameStatus.Unspecified;
         public GameOwnership GameOwnership { get; set; } = GameOwnership.Unspecified;
         public GamePriority GamePriority { get; set; } = GamePriority.Unspecified;
         public GameFormat GameFormat { get; set; } = GameFormat.Unspecified;
         public GameRegion GameRegion { get; set; } = GameRegion.Unspecified;
-        public SubscriptionService SubscriptionService { get; set; }
+        public int? SubscriptionServiceId { get; set; }
         public int AchievementsObtained { get; set; } = 0;
         public int AchievementsTotal { get; set; } = 0;
         public DateOnly? PlayedFrom { get; set; }
         public DateOnly? PlayedTo { get; set; }
-        public ICollection<CustomFolder> CustomFolders { get; set; } = new List<CustomFolder>();
-        public ICollection<RealOwner> RealOwners { get; set; } = new HashSet<RealOwner>();
+        public List<int>? CustomFoldersIdsList { get; set; }
+        public List<int>? RealOwnersIdsList { get; set; }
 
     }
 }

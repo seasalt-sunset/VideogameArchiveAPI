@@ -14,8 +14,8 @@ namespace VideogameArchiveAPI.Models.Entities.VideogameEntities
         public bool Infinite { get; set; } = false;
         public int TimesCompleted { get; set; } = 0;
         public string? Notes { get; set; }
-        public ICollection<CustomFolder>? CustomFolders { get; set; }
+        public ICollection<CustomFolder> CustomFolders { get; set; } = new List<CustomFolder>();
         public Review? Review { get; set; }
-        public ICollection<VideogameCopy> VideogameCopies { get; set; }
+        public ICollection<VideogameCopy> VideogameCopies { get; set; } = new HashSet<VideogameCopy>();
     }
 }

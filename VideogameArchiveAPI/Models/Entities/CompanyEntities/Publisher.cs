@@ -4,13 +4,13 @@ using VideogameArchiveAPI.Models.Entities.VideogameEntities;
 
 namespace VideogameArchiveAPI.Models.Entities.CompanyEntities
 {
-    public class Publisher : Company
+    public class Publisher
     {
-        public int CompanyId { get; set; }
+        public int PublisherId { get; set; }
         [Required]
-        public string CompanyName { get; set; }
-        public List<Videogame> GameList { get; set; }
-        public List<GamingPlatform> GamingConsolesList { get; set; }
+        public string PublisherName { get; set; }
+        public ICollection<Videogame> GameList { get; set; } = new List<Videogame>();
+        public ICollection<GamingPlatform> GamingConsolesList { get; set; } = new List<GamingPlatform>();
 
     }
 }

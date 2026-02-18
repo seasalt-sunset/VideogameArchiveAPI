@@ -7,7 +7,7 @@ namespace VideogameArchiveAPI.Models.Entities.VideogameEntities
         public int GameModeId { get; set; }
         [Required]
         public string GameModeName { get; set; }
-        public ICollection<Videogame> VideogameList { get; set; }
+        public ICollection<Videogame> VideogameList { get; set; } = new List<Videogame>();
 
     }
 }

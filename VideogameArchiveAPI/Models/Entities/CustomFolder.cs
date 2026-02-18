@@ -10,8 +10,8 @@ namespace VideogameArchiveAPI.Models.Entities
         public string FolderName { get; set; } = $"New Collection - {DateTimeOffset.Now}";
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
-        public ICollection<VideogameUser> VideogamesUser { get; set; }
-        public ICollection<VideogameCopy> VideogameCopies { get; set; }
+        public ICollection<VideogameUser> VideogamesUser { get; set; } = new List<VideogameUser>();
+        public ICollection<VideogameCopy> VideogameCopies { get; set; } = new List<VideogameCopy>();
 
 
     }

@@ -8,6 +8,6 @@ namespace VideogameArchiveAPI.Models.Entities
         public string RealOwnerName { get; set; }
 
         public string UserId { get; set; }
-        public ICollection<VideogameCopy> VideogameCopies { get; set; }
+        public ICollection<VideogameCopy> VideogameCopies { get; set; } = new HashSet<VideogameCopy>();
     }
 }

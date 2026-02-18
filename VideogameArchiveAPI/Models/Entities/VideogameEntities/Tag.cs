@@ -7,6 +7,6 @@ namespace VideogameArchiveAPI.Models.Entities.VideogameEntities
         public int TagId { get; set; }
         [Required]
         public string TagName { get; set; }
-        public ICollection<Videogame> VideogameList { get; set; }
+        public ICollection<Videogame> VideogameList { get; set; } = new List<Videogame>();
     }
 }
