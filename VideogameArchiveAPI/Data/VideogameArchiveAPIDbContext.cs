@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using VideogameArchiveAPI.Models.Entities;
-using VideogameArchiveAPI.Models.Entities.CompanyEntities;
-using VideogameArchiveAPI.Models.Entities.VideogameEntities;
 namespace VideogameArchiveAPI.Data
 {
     public class VideogameArchiveAPIDbContext : DbContext

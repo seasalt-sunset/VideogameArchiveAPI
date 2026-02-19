@@ -1,13 +1,13 @@
-﻿using VideogameArchiveAPI.Models.DTOs.SlimDTOs;
+﻿using VideogameArchiveAPI.Models.DTOs.VideogameDTOs;
 
-namespace VideogameArchiveAPI.Models.DTOs
+namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
 {
-    public class SubscriptionServiceDetailsDTO
+    public class SubscriptionServiceDetailsSaveDTO
     {
         public int SubscriptionServiceId { get; set; }
         public string SubscriptionServiceName { get; set; }
         public double? Price { get; set; }
-        public List<VideogameSlimDTO> Videogames { get; set; }
+        public List<int>? VideogamesIds { get; set; }
 
 
 

@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using VideogameArchiveAPI.Models.DTOs.CompanyDTOs;
+using VideogameArchiveAPI.Models.DTOs.VideogameDTOs;
 
-namespace VideogameArchiveAPI.Models.Entities
+namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
 {
-    public class GamingPlatform
+    public class GamingPlatformDetailsSaveDTO
     {
         public int PlatformId { get; set; }
         [Required]
@@ -10,8 +12,7 @@ namespace VideogameArchiveAPI.Models.Entities
         [Required]
         public DateOnly? ReleaseDate { get; set; }
         public int? PublisherId { get; set; }
-        public Publisher? Publisher { get; set; }
-        public ICollection<Videogame> VideogameList { get; set; } = new List<Videogame>();
+        public List<int>? VideogameListIds { get; set; }
 
 
 

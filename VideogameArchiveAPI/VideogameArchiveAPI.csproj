@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Models\Mappe\" />
     <Folder Include="Repository\" />
   </ItemGroup>
 

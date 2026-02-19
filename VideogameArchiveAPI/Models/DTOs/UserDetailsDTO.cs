@@ -1,4 +1,4 @@
-﻿using VideogameArchiveAPI.Models.DTOs.VideogameDTOs;
+﻿using VideogameArchiveAPI.Models.DTOs.SlimDTOs;
 
 namespace VideogameArchiveAPI.Models.DTOs
 {
