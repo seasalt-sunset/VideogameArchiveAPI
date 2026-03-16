@@ -6,6 +6,6 @@ namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
     {
         [Required]
         public string TagName { get; set; }
-        public List<int>? VideogameIdList { get; set; } = null;
+        public List<int>? VideogameIdsList { get; set; } = null;
     }
 }

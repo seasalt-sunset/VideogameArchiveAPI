@@ -1,10 +1,7 @@
-﻿using VideogameArchiveAPI.Models.DTOs.VideogameDTOs;
-
-namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
+﻿namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
 {
     public class SubscriptionServiceDetailsSaveDTO
     {
-        public int SubscriptionServiceId { get; set; }
         public string SubscriptionServiceName { get; set; }
         public double? Price { get; set; }
         public List<int>? VideogamesIds { get; set; }

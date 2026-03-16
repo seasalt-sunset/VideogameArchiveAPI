@@ -24,7 +24,7 @@ namespace VideogameArchiveAPI.Models.DTOs
         public List<string> Genres { get; set; }
         public List<string>? Tags { get; set; }
         public List<string> GameModes { get; set; }
-        public List<string>? VideogameUsers { get; set; }
+        public int VideogameUsersCount { get; set; }
 
     }
 }

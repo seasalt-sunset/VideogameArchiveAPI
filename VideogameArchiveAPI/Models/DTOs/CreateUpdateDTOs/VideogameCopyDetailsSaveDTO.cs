@@ -5,7 +5,7 @@ namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
 {
     public class VideogameCopyDetailsSaveDTO
     {
-        public VideogameSlimDTO? FromVideogameCollection { get; set; }
+        public int? FromVideogameCollectionId { get; set; }
         public int HoursPlayed { get; set; }
         public int MinutesPlayed { get; set; }
         public GameStatus GameStatus { get; set; } = GameStatus.Unspecified;

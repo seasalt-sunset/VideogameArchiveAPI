@@ -1,12 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using VideogameArchiveAPI.Models.DTOs.CompanyDTOs;
-using VideogameArchiveAPI.Models.DTOs.VideogameDTOs;
-
 namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
 {
     public class GamingPlatformDetailsSaveDTO
     {
-        public int PlatformId { get; set; }
         [Required]
 		public string PlatformName { get; set; }
         [Required]

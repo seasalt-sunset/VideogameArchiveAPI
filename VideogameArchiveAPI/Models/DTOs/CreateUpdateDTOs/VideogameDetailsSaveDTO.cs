@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using VideogameArchiveAPI.Enums;
-using VideogameArchiveAPI.Models.DTOs.CompanyDTOs;
 
 namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
 {
     public class VideogameDetailsSaveDTO
     {
-        public int GameId { get; set; }
         [Required]
         [MaxLength(500)]
         public string GameName { get; set; }
@@ -20,7 +18,7 @@ namespace VideogameArchiveAPI.Models.DTOs.CreateUpdateDTOs
 
         public int? DLCOfWhatGameId { get; set; } = null;
         public int? FromVideogameCollectionId { get; set; } = null;
-        public List<int>? CollectionOfWhatGameIds { get; set; } = null;
+        public List<int>? CollectionOfWhatGamesIds { get; set; } = null;
 
         public List<int>? DLCsIds { get; set; } = null;
         public List<int> GamingPlatformsIds { get; set; } 
