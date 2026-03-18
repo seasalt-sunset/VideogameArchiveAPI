@@ -1,2 +1,3 @@
 ﻿1) Add image to videogames
-2) Add CreateUpdate Mappers
+2) Start from IGenericRepository and add repositories for each entity 
+3) Add Update Mappers
